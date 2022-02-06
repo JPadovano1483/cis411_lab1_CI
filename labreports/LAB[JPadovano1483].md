@@ -9,11 +9,13 @@ ___
 
 # Step 1: Fork this repository
 - The URL of my forked repository: https://github.com/JPadovano1483/cis411_lab1_CI
-- The accompanying diagram of what my fork precisely and conceptually represents...
+  
+  This diagram shows the relationship between Trevor Bunch's repo and account and my newly forked repo.
+  ![Forked Repo Relationship](../assets/Forked%20Repository.svg)
 
 # Step 2: Clone your forked repository from the command line  
 - Local file directory: C:\Users\padov\Github\cis411_lab1_CI
-- The command to navigate to the directory when I open up the command line is... cd /c/Users/padov/Github/cis411_lab1_CI/
+- The command to navigate to the directory when I open up the command line is: cd /c/Users/padov/Github/cis411_lab1_CI/
 
 # Step 3: Run the application locally
 - My GraphQL response from adding myself as an account on the test project
@@ -55,11 +57,12 @@ a4096db Create README.md
 37393ae Bug fixed
 1949d2a Update LAB_INSTRUCTIONS.md
 ```
-- The accompanying diagram of what my feature branch precisely and conceptually represents...
+This digram shows the relationship between my main and feature branch.
+  ![Main/Feature branch relationship](../assets/Feature%20Branch%20Diagram.svg)
 
 # Step 5: Setup a Continuous Integration configuration
 - What is the .circleci/config.yml doing?  
-THe .circleci/config.yml file orchestrates the entire delivery process from the initial build to deployment. It tells CircleCI what to do with the code and what to check and automates the process of testing the code/software that is being continuously integrated.
+The .circleci/config.yml file orchestrates the entire delivery process from the initial build to deployment. It tells CircleCI what to do with the code and what to check and automates the process of testing the code/software that is being continuously integrated.
 
 - What do the various sections on the config file do?  
    1. Version: indicates what version of the CircleCI platform you are using
