@@ -32,22 +32,51 @@ ___
 # Step 4: Creating a feature branch
 - The output of my git commit log
 ```
-Insert the logs here.
+676fa43 (HEAD -> labreport) Finished steps 1-4
+d5dff97 (origin/labreport) adding file to branch @trevordbunch
+7490dcb (upstream/main, origin/main, origin/HEAD, main) Add Links to Node in Instructions
+ecaaa53 Update branch terminology
+c552213 Merge pull request #3 from hallienicholas/main
+78ede9f Corrected error
+1fe415c Merge pull request #1 from trevordbunch/labreport
+13e571f Update Lab readme, instructions and templates
+eafe253 Adjust submitting instructions
+47e83cd Add images to LabReport
+ec18770 Add Images
+dbf826a Answer Step 4
+a9c1de6 Complete Step 1, 2 and 3 of LAB_TREVORDBUNCH
+1ead543 remove LAB.md
+8c38613 Initial commit of labreport with @tangollama
+dabceca Merge pull request #24 from tangollama/circleci
+a4096db Create README.md
+2f01bf4 Update LAB_INSTRUCTIONS.md
+347bd50 Update LAB_INSTRUCTIONS.md
+7aaa9f3 Update LAB_INSTRUCTIONS.md
+37393ae Bug fixed
+1949d2a Update LAB_INSTRUCTIONS.md
 ```
 - The accompanying diagram of what my feature branch precisely and conceptually represents...
 
 # Step 5: Setup a Continuous Integration configuration
 - What is the .circleci/config.yml doing?  
-
+THe .circleci/config.yml file orchestrates the entire delivery process from the initial build to deployment. It tells CircleCI what to do with the code and what to check and automates the process of testing the code/software that is being continuously integrated.
 
 - What do the various sections on the config file do?  
-   
+   1. Version: indicates what version of the CircleCI platform you are using
+   2. Jobs: seems to essentially contain a list of named children which each contain a list of steps for CircleCI to run through
+   3. Build: a child of jobs containing steps to run through
+   4. Docker: associates a docker container to a job, Build in this case
+   5. Working-directory: this tells CircleCI where to work
+   6. Steps: gives a list of run directives to be executed, this is where the automated testing occurs
+   7. Restore-cache: downloads and caches dependencies
+   8. Run: specific directive to be executed, the first one installing yarn and the second using it to test the code
+   9. Save-cache: this seems to save the cache of dependencies
 
 - When a CI build is successful, what does that philosophically and practically/precisely indicate about the build?  
-   
+   This indicates that the build does not contain parts tht interfere with one another in any harmful ways. This means the repo is ready to continue with CI/CD development.
 
 - If you were to take the next step and ready this project for Continuous Delivery, what additional changes might you make in this configuration (conceptual, not code)?  
-   
+   I might try to add some more tests to the config.yml file to make sure everything is working properly. This might entail adding more jobs and more steps/run commands within each job.
 
 # Step 6: Merging the feature branch
 * The output of my git commit log
