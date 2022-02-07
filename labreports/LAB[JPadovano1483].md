@@ -1,6 +1,6 @@
 # Lab Report: Continuous Integration
 ___
-**Course:** CIS 411, Spring 2021  
+**Course:** CIS 411, Spring 2022 
 **Instructor(s):** [Trevor Bunch](https://github.com/trevordbunch)  
 **Name:** Jamie Padovano
 **GitHub Handle:** JPadovano1483 
@@ -10,7 +10,7 @@ ___
 # Step 1: Fork this repository
 - The URL of my forked repository: https://github.com/JPadovano1483/cis411_lab1_CI
   
-  This diagram shows the relationship between Trevor Bunch's repo and account and my newly forked repo.
+  This diagram shows the relationship between Trevor Bunch's repo and my newly forked repo.
   ![Forked Repo Relationship](../assets/Forked%20Repository.svg)
 
 # Step 2: Clone your forked repository from the command line  
@@ -34,8 +34,10 @@ ___
 # Step 4: Creating a feature branch
 - The output of my git commit log
 ```
-676fa43 (HEAD -> labreport) Finished steps 1-4
-d5dff97 (origin/labreport) adding file to branch @trevordbunch
+11a24d1 (HEAD -> labreport) added diagrams
+3f1f3aa (origin/labreport) Finished step 5
+676fa43 Finished steps 1-4
+d5dff97 adding file to branch @trevordbunch
 7490dcb (upstream/main, origin/main, origin/HEAD, main) Add Links to Node in Instructions
 ecaaa53 Update branch terminology
 c552213 Merge pull request #3 from hallienicholas/main
@@ -54,15 +56,14 @@ a4096db Create README.md
 2f01bf4 Update LAB_INSTRUCTIONS.md
 347bd50 Update LAB_INSTRUCTIONS.md
 7aaa9f3 Update LAB_INSTRUCTIONS.md
-37393ae Bug fixed
-1949d2a Update LAB_INSTRUCTIONS.md
 ```
 This digram shows the relationship between my main and feature branch.
   ![Main/Feature branch relationship](../assets/Feature%20Branch%20Diagram.svg)
 
 # Step 5: Setup a Continuous Integration configuration
 - What is the .circleci/config.yml doing?  
-The .circleci/config.yml file orchestrates the entire delivery process from the initial build to deployment. It tells CircleCI what to do with the code and what to check and automates the process of testing the code/software that is being continuously integrated.
+  
+  The .circleci/config.yml file orchestrates the entire delivery process from the initial build to deployment. It tells CircleCI what to do with the code and what to check and automates the process of testing the code/software that is being continuously integrated. This is where the specific tests are specified to run on the software.
 
 - What do the various sections on the config file do?  
    1. Version: indicates what version of the CircleCI platform you are using
@@ -76,9 +77,11 @@ The .circleci/config.yml file orchestrates the entire delivery process from the 
    9. Save-cache: this seems to save the cache of dependencies
 
 - When a CI build is successful, what does that philosophically and practically/precisely indicate about the build?  
+  
    This indicates that the build does not contain parts tht interfere with one another in any harmful ways. This means the repo is ready to continue with CI/CD development.
 
 - If you were to take the next step and ready this project for Continuous Delivery, what additional changes might you make in this configuration (conceptual, not code)?  
+  
    I might try to add some more tests to the config.yml file to make sure everything is working properly. This might entail adding more jobs and more steps/run commands within each job.
 
 # Step 6: Merging the feature branch
